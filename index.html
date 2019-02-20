@@ -381,7 +381,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="w3-content w3-display-container">
+        <div class="w3-content w3-display-container" style="max-width:600px">
           <img class="mySlides" src="img/pre-curso/1.png" style="width:100%">
           <img class="mySlides" src="img/pre-curso/2.png" style="width:100%">
           <img class="mySlides" src="img/pre-curso/3.png" style="width:100%">
@@ -610,6 +610,24 @@
         x[i].style.display = "none";
       }
       x[slideIndex-1].style.display = "block";
+    }
+
+
+
+
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 5000); // Change image every 4 seconds
     }
   </script>
 
