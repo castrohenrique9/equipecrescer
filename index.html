@@ -8,6 +8,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  .mySlides {display:none;}
+  </style>
+
   <title>Equipe Crescer</title>
 
   <!-- Bootstrap core CSS -->
@@ -368,37 +373,23 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Nossa Equipe</h2>
+          <h2 class="section-heading text-uppercase">Pré-Curso</h2>
           <h3 class="section-subheading text-muted">
-            <strong>Somos a equipe pioneira no estado do Tocantins.</strong><br>
-            Contamos com <strong>2 Diamonds</strong> e <strong>2 Green Diamonds</strong> para lhe proporcionar o melhor suporte.
+            <strong>Entenda o funcionamento básico da nossa empresa</strong><br>
+            Entre em contato por WhatsApp ou Instagram para obter mais detalhes.
           </h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>ALTERAR</h4>
-            <p class="text-muted">O <strong>primeiro</strong> Green Diamond do Tocantins</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="http://www.facebook.com/robsonfernando.silveira" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="http://www.instagram.com/robson_fernando_2016/" target="_blank">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Texto para pré-curso.</p>
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="img/pre-curso/1.png" style="width:100%">
+          <img class="mySlides" src="img/pre-curso/2.png" style="width:100%">
+          <img class="mySlides" src="img/pre-curso/3.png" style="width:100%">
+          <img class="mySlides" src="img/pre-curso/4.png" style="width:100%">
+          <img class="mySlides" src="img/pre-curso/5.png" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
       </div>
     </div>
@@ -601,6 +592,26 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
 
 </body>
 
